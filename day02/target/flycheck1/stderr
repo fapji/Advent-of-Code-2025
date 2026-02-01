@@ -1,60 +1,12 @@
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
-   0.024384100s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint: fingerprint error for day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02)/Check { test: false }/TargetInner { name: "part1", doc: true, ..: with_path("D:\\Programing\\Advent of Code 2025\\day02\\src\\bin\\part1.rs", Edition2024) }
-   0.024433100s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint:     err: failed to read `D:\Programing\Advent of Code 2025\day02\target\debug\.fingerprint\day02-ed5fb751249aa1d4\bin-part1`
-
-Caused by:
-    The system cannot find the file specified. (os error 2)
-
-Stack backtrace:
-   0: git_midx_writer_dump
-   1: git_midx_writer_dump
-   2: git_midx_writer_dump
-   3: git_midx_writer_dump
-   4: git_filter_source_repo
-   5: git_filter_source_repo
-   6: git_filter_source_repo
-   7: git_filter_source_repo
-   8: git_filter_source_repo
-   9: git_filter_source_repo
-  10: git_filter_source_repo
-  11: git_libgit2_prerelease
-  12: <unknown>
-  13: <unknown>
-  14: <unknown>
-  15: <unknown>
-  16: git_midx_writer_dump
-  17: git_filter_source_repo
-  18: git_midx_writer_dump
-  19: BaseThreadInitThunk
-  20: RtlUserThreadStart
-   0.038310500s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint: fingerprint error for day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02)/Check { test: true }/TargetInner { name: "part1", doc: true, ..: with_path("D:\\Programing\\Advent of Code 2025\\day02\\src\\bin\\part1.rs", Edition2024) }
-   0.038336200s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint:     err: failed to read `D:\Programing\Advent of Code 2025\day02\target\debug\.fingerprint\day02-63f4d5049efd709d\test-bin-part1`
-
-Caused by:
-    The system cannot find the file specified. (os error 2)
-
-Stack backtrace:
-   0: git_midx_writer_dump
-   1: git_midx_writer_dump
-   2: git_midx_writer_dump
-   3: git_midx_writer_dump
-   4: git_filter_source_repo
-   5: git_filter_source_repo
-   6: git_filter_source_repo
-   7: git_filter_source_repo
-   8: git_filter_source_repo
-   9: git_filter_source_repo
-  10: git_filter_source_repo
-  11: git_libgit2_prerelease
-  12: <unknown>
-  13: <unknown>
-  14: <unknown>
-  15: <unknown>
-  16: git_midx_writer_dump
-  17: git_filter_source_repo
-  18: git_midx_writer_dump
-  19: BaseThreadInitThunk
-  20: RtlUserThreadStart
+   0.069469100s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint: stale: changed "D:\\Programing\\Advent of Code 2025\\day02\\src\\bin\\part1.rs"
+   0.069501500s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint:           (vs) "D:\\Programing\\Advent of Code 2025\\day02\\target\\debug\\.fingerprint\\day02-ed5fb751249aa1d4\\dep-bin-part1"
+   0.069509200s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13414451807, nanos: 340114900 } < FileTime { seconds: 13414452661, nanos: 827343700 }
+   0.069663300s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint: fingerprint dirty for day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02)/Check { test: false }/TargetInner { name: "part1", doc: true, ..: with_path("D:\\Programing\\Advent of Code 2025\\day02\\src\\bin\\part1.rs", Edition2024) }
+   0.069692300s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "D:\\Programing\\Advent of Code 2025\\day02\\target\\debug\\.fingerprint\\day02-ed5fb751249aa1d4\\dep-bin-part1", reference_mtime: FileTime { seconds: 13414451807, nanos: 340114900 }, stale: "D:\\Programing\\Advent of Code 2025\\day02\\src\\bin\\part1.rs", stale_mtime: FileTime { seconds: 13414452661, nanos: 827343700 } }))
+   0.070214500s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint: stale: changed "D:\\Programing\\Advent of Code 2025\\day02\\src\\bin\\part1.rs"
+   0.070224700s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint:           (vs) "D:\\Programing\\Advent of Code 2025\\day02\\target\\debug\\.fingerprint\\day02-63f4d5049efd709d\\dep-test-bin-part1"
+   0.070230700s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13414451807, nanos: 339117100 } < FileTime { seconds: 13414452661, nanos: 827343700 }
+   0.070361100s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint: fingerprint dirty for day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02)/Check { test: true }/TargetInner { name: "part1", doc: true, ..: with_path("D:\\Programing\\Advent of Code 2025\\day02\\src\\bin\\part1.rs", Edition2024) }
+   0.070375700s  INFO prepare_target{force=false package_id=day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02) target="part1"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "D:\\Programing\\Advent of Code 2025\\day02\\target\\debug\\.fingerprint\\day02-63f4d5049efd709d\\dep-test-bin-part1", reference_mtime: FileTime { seconds: 13414451807, nanos: 339117100 }, stale: "D:\\Programing\\Advent of Code 2025\\day02\\src\\bin\\part1.rs", stale_mtime: FileTime { seconds: 13414452661, nanos: 827343700 } }))
     Checking day02 v0.1.0 (D:\Programing\Advent of Code 2025\day02)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.15s
