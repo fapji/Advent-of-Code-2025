@@ -27,7 +27,7 @@ fn main() -> std::io::Result<()> {
         let tophalfnum = id / 10i64.pow(numdigits as u32 / 2u32);
         let bottomhalfnum = id % 10i64.pow(numdigits as u32 / 2u32);
 
-            if id == 0 || tophalfnum == bottomhalfnum {
+            if tophalfnum == bottomhalfnum {
                 sum_invalidids += id;
             }
             //println!("{}", {id});
