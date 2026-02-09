@@ -28,11 +28,9 @@ fn check_every_pattern(num: i32) -> bool {
         for index in 0..amount_of_checks {
             //cluster_size is the size of the cluster index is the position you wanna take it out of if cluster_size is 2 index needs to move by 2
             let mut current_cluster =
-                originnum / 10i32.pow(numdigits as u32 - (cluster_size * index+1) as u32);
-            //Now Add something with % (cluster_size needs to be cut on the right after the first index) 
-            current_cluster =
-                current_cluster % 10i32.pow((cluster_size) as u32);
-
+                originnum / 10i32.pow(numdigits as u32 - (cluster_size * index + cluster_size) as u32);
+            //Now Add something with % (cluster_size needs to be cut on the right after the first index)
+            current_cluster = current_cluster % 10i32.pow((cluster_size) as u32);
 
             println!("Index: {}", index);
             if index == 0 {
@@ -49,7 +47,7 @@ fn check_every_pattern(num: i32) -> bool {
         }
         if is_invalid_per_clustersize {
             is_invalid = is_invalid_per_clustersize;
-         break;   
+            break;
         }
     }
     //println!("amount of divisions: {}", { maximum_cluster });
