@@ -1,0 +1,6 @@
+# Rust build output
+target/
+**/target/
+
+# Cargo.lock (only ignore if this is NOT a binary crate)
+# Cargo.lock

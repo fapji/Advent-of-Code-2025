@@ -41,7 +41,7 @@ fn check_every_pattern(num: i32) -> bool {
             if previous_cluster != current_cluster {
                 is_invalid_per_clustersize = false;
                 println!("Sadge");
-                //break;
+                break;
             }
             previous_cluster = current_cluster;
         }
@@ -51,6 +51,12 @@ fn check_every_pattern(num: i32) -> bool {
         }
     }
     //println!("amount of divisions: {}", { maximum_cluster });
+    if is_invalid {
+        println!("Yipee repeated pattern");
+    }
+    else {
+        println!("sadge no repeating pattern");
+    }
 
     return is_invalid;
 }
