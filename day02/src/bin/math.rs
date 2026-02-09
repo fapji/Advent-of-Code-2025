@@ -27,11 +27,11 @@ fn check_every_pattern(num: i32) -> bool {
         let mut previous_cluster = 0;
         for index in 0..amount_of_checks {
             //cluster_size is the size of the cluster index is the position you wanna take it out of if cluster_size is 2 index needs to move by 2
-            let current_cluster_halfway =
+            let mut current_cluster =
                 originnum / 10i32.pow(numdigits as u32 - (cluster_size * index+1) as u32);
             //Now Add something with % (cluster_size needs to be cut on the right after the first index) 
-            let current_cluster =
-                current_cluster_halfway % 10i32.pow((index * cluster_size) as u32);
+            current_cluster =
+                current_cluster % 10i32.pow((cluster_size) as u32);
 
 
             println!("Index: {}", index);
