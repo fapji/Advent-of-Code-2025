@@ -1,6 +1,5 @@
 fn main() {
     let cool_number = 2121212119i64;
-    // _split_at_half(cool_number);
     check_every_pattern(cool_number);
 }
 
