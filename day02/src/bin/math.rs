@@ -6,7 +6,7 @@ fn main() {
 
 fn _split_at_half(num: i64) {
     let originnum = num;
-    let numdigits: f32 = f32::log(originnum as f32, 10.0).ceil();
+    let numdigits: f32 = f32::log(originnum as f32, 10.0).floor() + 1.0;
     //print!("logarithm: {}", {numdigits});
     let tophalfnum = originnum / 10i64.pow(numdigits as u32 / 2u32);
     let bottomhalfnum = originnum % 10i64.pow(numdigits as u32 / 2u32);
@@ -29,8 +29,7 @@ fn check_every_pattern(originnum: i64) -> bool {
         println!("Current Cluster Size: {}", { cluster_size });
 
         //if the number of digits divided by the cluster size is a number without comma's do the checks (This checks if a repeating pattern is possible)
-        if numdigits as i32 % cluster_size == 0
-        {
+        if numdigits as i32 % cluster_size == 0 {
             let mut is_invalid_per_clustersize = true;
             let amount_of_checks = numdigits as i32 / cluster_size;
             println!("amount_of_checks: {}", { amount_of_checks });
@@ -40,8 +39,8 @@ fn check_every_pattern(originnum: i64) -> bool {
                 println!("Index: {}", index);
 
                 //cluster_size * the size of the index is the position you wanna take it out of, if cluster_size is 2 index needs to move by 2
-                let mut current_cluster = originnum
-                    / 10i64.pow(numdigits as u32 - (cluster_size * index + cluster_size) as u32);
+                let mut current_cluster =
+                    originnum / 10i64.pow(numdigits as u32 - (cluster_size * (index + 1)) as u32);
                 println!("Current Cluster Before modulo: {current_cluster}");
 
                 //Now Add something with % (cluster_size needs to be cut on the right after the first index)
